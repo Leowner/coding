@@ -13,7 +13,8 @@ int main () {
 		n++;
 		printf("Puzzle #%d:\n", n);
         for (int i = 0; i < 5; i++) {
-            gets(stem);
+            for (int j = 0; j < 5; j++) stem[j] = getchar();
+            getchar();
             if (stem[0] == 'Z') return (0);
             if (stem[4] == '\0') stem[4] = ' ';
             for (int j = 0; j < 5; j++) {
