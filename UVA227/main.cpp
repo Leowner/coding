@@ -14,7 +14,7 @@ int main () {
         for (int i = 0; i < 5; i++) {
             gets(stem);
             if (stem[0] == 'Z') return (0);
-//            if (stem[5] == '\0') stem[5] = ' ';
+            if (stem[4] == '\0') stem[4] = ' ';
             for (int j = 0; j < 5; j++) {
 				s[i][j] = stem[j];
                 if (s[i][j] == ' ') {
@@ -25,6 +25,7 @@ int main () {
         }
         int slen = -1;
 		char c;
+		memset(stem, 0, sizeof(stem));
 		while (1) {
 			c = getchar();
 			if (c == ' ' || c == '\n') continue;
